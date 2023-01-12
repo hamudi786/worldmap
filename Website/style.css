@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+main {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+body {
+    background-color: white;
+}
+
+svg path {
+    fill: #606060;
+    stroke: white;
+    stroke-width: 0.5px;
+}
+
+svg path.Baumer:hover {
+    fill: #0062ae;
+    transition: 0.4s;
+    cursor: pointer;
+} 
+svg{
+    position: relative;
+    right: 3%;
+    top: 15%
+}
+.active{
+    fill: #0062ae;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.container_list{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    margin: 3%;
+    padding: 1.5%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    border-color: #0062ae;
+    border-style: solid;
+    border-width: 2px;
+}
+
+i{
+    position: relative;
+    z-index: 2; /*position relative und z-index 2 relevant damit der location dot oben bleibt */
+}
+
+.Dot_Southington{
+    visibility: visible;
+    left: 26.1%;
+    bottom: 30.5%;
+}
+
+.Baumer_United_States.active ~ .Dot_Southington{
+    visibility: visible;
+}
